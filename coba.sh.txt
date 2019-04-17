@@ -1,0 +1,9 @@
+find . -type f -name file.txt -exec grep --color M* {} \;
+
+while read -r line
+do
+    if [ ${#line} -eq 5 ]
+    then
+      echo $line
+    fi
+done < file.txt
